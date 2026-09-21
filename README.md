@@ -40,47 +40,8 @@
 | 裂变散射 | 每级增加两发散射，最多 6 发 |
 | 维度新星 | 解锁 / 强化 E 键跨维度范围攻击，冷却 6 秒 |
 
-## 快速开始
-
-游戏为纯前端单文件实现，无任何依赖：
-
-```bash
-# 方式一：直接用浏览器打开
-open index.html        # macOS
-start index.html       # Windows
-
-# 方式二：本地起一个静态服务（可选）
-python -m http.server 8000
-# 然后访问 http://localhost:8000
-```
-
-### 部署到 GitHub Pages
-
-仓库上传后，在 **Settings → Pages** 中选择 `Deploy from a branch`，分支选 `main`，根目录 `/` 即可在线游玩。
-
-## 运行测试
-
-`verify.cjs` 是无依赖的 Node 逻辑自测脚本，覆盖射击、相位引爆、维度切换、升级/BOSS 队列、新星、冲刺、散射、主循环与重开等 13 项断言：
-
-```bash
-node verify.cjs
-# 预期输出: PASS: shooting, bullet size, phase detonation/cooldown, ...
-```
-
-## 文件结构
-
-```
-QuantumBreach_V1.0.0/
-├── index.html    # 游戏本体（含样式、逻辑，全部内联）
-└── verify.cjs    # 无依赖的 Node 逻辑测试脚本
-```
-
 ## 技术说明
 
 - 纯原生 HTML5 Canvas + Vanilla JS，无框架、无构建步骤、无外部资源
 - 固定时间步长（60 FPS）游戏循环，适配窗口缩放
 - 赛博故障风（glitch）UI，青色 α / 品红 β 维度视觉区分
-
-## License
-
-（暂未指定许可证，如需开源请补充 LICENSE 文件，例如 MIT。）
