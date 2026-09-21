@@ -10,7 +10,7 @@ Weave between quantum dimensions, detonate phase marks across the entire enemy s
 
 ## Overview
 
-A top-down arena shooter. Weave between the α / β / ω quantum dimensions while dodging bullets, stack **phase marks** on enemies, then detonate them all at once to clear the field.
+A top-down arena shooter. Weave between the α / β quantum dimensions while dodging bullets, stack **phase marks** on enemies, then detonate them all at once to clear the field.
 
 
 
@@ -50,53 +50,6 @@ On level-up, choose one permanent upgrade from three random options:
 | Fission Scatter | +2 scatter shots per level, up to 6                       |
 | Dimension Nova  | Unlock / enhance E-key cross-dimensional AoE, 6s cooldown |
 
-## Getting Started
-
-The game is a single-file, dependency-free frontend implementation:
-
-
-
-```
-\# Option 1: just open it in a browser
-
-open index.html        # macOS
-
-start index.html       # Windows
-
-\# Option 2: serve it locally (optional)
-
-python -m http.server 8000
-
-\# then visit http://localhost:8000
-```
-
-### Deploy to GitHub Pages
-
-After pushing the repo, go to **Settings → Pages**, choose `Deploy from a branch`, select the `main` branch at the root `/` — the game is playable online immediately.
-
-## Running the Tests
-
-`verify.cjs` is a dependency-free Node logic test covering 13 assertions: shooting, bullet size, phase detonation/cooldown, dimension switching, upgrade/boss queue, nova, dash, scatter, main loop, and restart:
-
-
-
-```
-node verify.cjs
-
-\# Expected output: PASS: shooting, bullet size, phase detonation/cooldown, ...
-```
-
-## File Structure
-
-
-
-```
-QuantumBreach\_V1.0.0/
-
-├── index.html    # The game itself (all styling & logic inlined)
-
-└── verify.cjs    # Dependency-free Node logic test script
-```
 
 ## Tech Notes
 
@@ -107,7 +60,3 @@ QuantumBreach\_V1.0.0/
 * Fixed-timestep (60 FPS) game loop, scales to window size
 
 * Cyberpunk glitch UI, cyan α / magenta β dimension color coding
-
-## License
-
-(No license specified yet — add a LICENSE file, e.g. MIT, before open-sourcing.)
